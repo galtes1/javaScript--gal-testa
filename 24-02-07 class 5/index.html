@@ -4,9 +4,96 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>class 5</title>
-    <script src="app.js"></script>
+    <style>
+      body {
+        direction: rtl;
+      }
+      .button-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        max-width: 300px;
+        margin: auto;
+      }
+      .grid-button {
+        padding: 20px;
+        font-size: 16px;
+        border: 1px solid #000;
+        background-color: #fff;
+        cursor: pointer;
+        height: 70px;
+      }
+    </style>
   </head>
   <body>
-    <h1>Class 5</h1>
+    <h1 id="mainTitle">Class 5</h1>
+    <h3>אובייקט הוא מבנה אשר אפשר לתת לו נתונים</h3>
+    <p style="direction: ltr">
+      let student = { <br />
+      firstName: "student first name", <br />
+      email: "asdasd@gmail.com" <br />
+      }
+    </p>
+    <h3>מחלקה רגילה - class</h3>
+    <ul>
+      <li>יוצרת אובייקטים מהסוג של אותה מחלקה - קונסטרקטור</li>
+      <li>במחלקה מוגדרת מה הם התכונות ומה הם המתודות שיש לאותו אובייקט</li>
+      <li>date - תאריך</li>
+    </ul>
+    <br />
+    <h3>מחלקה סטטית</h3>
+    <ul>
+      <li>לא יוצרת אובייקטים</li>
+      <li>
+        מכילה בתוכה הרבה נתונים (מאפיינים) ופונקציות (מתודות) ששייכים לנושא
+        מסויים
+      </li>
+      <li>math - לא יהיה new לפני</li>
+    </ul>
+    <h3>DOM - document object modek</h3>
+    <p>מסמך html שאנחנו עובדים עליו</p>
+    <ol>
+      <li>תפיסת אלמנטים - getElementBy</li>
+      <li>שינוי תוכן האלמנט</li>
+      <li>אירועים</li>
+      <ul>
+        <li>addEventListener</li>
+        <li>לחיצה על כפתור</li>
+        <li>שינוי תוכן של טקסט</li>
+        <li>ברגע שעולה העמוד לעשות משהו</li>
+        <li>במעבר עכבר</li>
+      </ul>
+      <li>
+        כאשר אני כותב פונקציה שתשתמש ב-event listener היא אמורה לא לקבל כלום
+        <br />
+        או יכולה לקבל את פרטי האירוע (למשל קליק)
+      </li>
+    </ol>
+    <div style="direction: ltr">
+      <label for="num1">first number</label><br />
+      <input type="number" id="num1" /><br />
+      <label for="num2">second number</label><br />
+      <input type="number" id="num2" /><br />
+      <span>calculate</span><br />
+      <button id="addBtn">add</button>
+      <button id="subtructBtn">subtruct</button>
+      <button id="multiplyBtn">multiply</button>
+      <button id="divideBtn">divide</button>
+    </div>
+    <br />
+    <h3 style="direction: ltr">drix</h3>
+    <div class="button-grid">
+      <button id="mybtn0" class="grid-button"></button>
+      <button id="mybtn1" class="grid-button"></button>
+      <button id="mybtn2" class="grid-button"></button>
+      <button id="mybtn3" class="grid-button"></button>
+      <button id="mybtn4" class="grid-button"></button>
+      <button id="mybtn5" class="grid-button"></button>
+      <button id="mybtn6" class="grid-button"></button>
+      <button id="mybtn7" class="grid-button"></button>
+      <button id="mybtn8" class="grid-button"></button>
+    </div>
+
+    <script src="app.js"></script>
   </body>
 </html>
