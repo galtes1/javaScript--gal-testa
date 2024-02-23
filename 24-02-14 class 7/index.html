@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>class 7</title>
+    <style>
+      body {
+        direction: rtl;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>שיעור מספר 7</h1>
+    <h2>נושאי השיעור</h2>
+    <ol>
+      <li>האובייקט widow</li>
+      <ul>
+        <li>local storage</li>
+        <li>session storage</li>
+        <li>מיני פרוייקט - מערכת התחברות והרשמה</li>
+      </ul>
+      <li>Ansyc await מילים שמורות</li>
+      <li>מצגות</li>
+    </ol>
+    <div style="direction: ltr">
+      <h3>Objects that are part of window object</h3>
+      <ol>
+        <li>Math</li>
+        <li>Date</li>
+        <li>document</li>
+      </ol>
+      <h3>Some common methods</h3>
+      <ol>
+        <li>Math.floor() , ...</li>
+        <li>myDate1.getFullYear()</li>
+        <li>document.getElementByID</li>
+        <li>document.quertSelector(#myID)</li>
+      </ol>
+    </div>
+    <h3>ההבדל בין מחלקה סטטית למחלקה רגילה:</h3>
+    <p>נניח שיש לי מחלקה טטית בשם Math</p>
+    <p>ונניח שיש לי מחלקה רגילה בשם Date</p>
+    <p>איך משתמשים במתודות/מאפיינים של Math?</p>
+    <p style="font-weight: bold">באמצעות שם המחלקה עצמה</p>
+    <h4>מתודות</h4>
+    <p>
+      Math.pow() <br />
+      Math.floor() <br />
+      Math.round() <br />
+      Math.random()
+    </p>
+    <h4>מאפיינים</h4>
+    <p>
+      Math.Pi <br />
+      Math.E
+    </p>
+    <h3>איך משתמשים במחלקה רגילה?</h3>
+    <p style="font-weight: bold">מחלקה רגילה למעשה "מגדירה לנו עוד type"</p>
+    <h4>איך נשתמש בה?</h4>
+    <p>נגדיר משתנה מהסוג של אותה מחלקה</p>
+    <p>let x = new Date()</p>
+    <h4>כיצד נשתמש במתודות ובמאפיינים?</h4>
+    <p>נפנה למשתנה עצמו (x) ולא למחלקה (Date)</p>
+    <br />
+    <h3>מאפיינים נפוצים של אובייקט window</h3>
+    <button id="aBtn">click</button>
+    <p id="timer">10</p>
+    <p>window.location</p>
+    <p>אובייקט עם כל מיני נתונים לגבי המיקום הנוכחי שלנו באתר</p>
+    <br />
+    <h3>מתודות נפוצות של אובייקט window</h3>
+    <p>setTimeout()</p>
+    <p>מאפשרת להגדיר פונקציה שתרוץ עוד זמן מה</p>
+    <p>מקבלת פונקציה וכמה מילישניות היא ממתינה</p>
+    <br />
+    <p>setInterval()</p>
+    <p>מאפשרת להגדיר פונקציה שתרוץ שוב ושוב כל כמה שניות</p>
+    <br />
+    <br />
+    <h3>arrow function</h3>
+
+    <p>
+      hoisting = מונח אשר אומר שכל פונקציה אשר מגדירים בקוד JS יש לה גישה מתחילת
+      הקוד
+    </p>
+    <p>במשתנה let אין את זה</p>
+    <p>ניתן בתוך משתנה לשמור פונקציה, בדרך כלל משתנה const, משתנה קבוע</p>
+    <p>(ואז לא ניתן לפנות אליה בהויסטינג)</p>
+    <p>הסינטקסט נראה כך</p>
+    <p style="direction: ltr">
+      const myFunction = function () { <br />
+      console.log("hello");<br />
+      };
+    </p>
+    <p>הכתיב הזה בעצם שווה לכתיב הזה:</p>
+    <p style="direction: ltr">
+      cont myFunction = () => { <br />
+      console.log ("hello"); <br />
+      };
+    </p>
+    <h4>למה זה עוזר?</h4>
+    <p>זה יכול לעזור בלהכניס פונקציה בצורה פשוטה בצורה אנונימית</p>
+    <h4>דוגמה</h4>
+    <p>נגדיר כאן כפתור</p>
+    <button id="bBtn">click</button>
+    <p>id=bBtn</p>
+    <p>ונפנה אליו ב-JS בצורה הבאה</p>
+    <p style="direction: ltr">
+      let button = document.getElementById("bBtn");<br />
+      button.addEventListener("click", () => console.log("hi"));
+    </p>
+    <h4>למה זה עוזר?</h4>
+    <h3>storage</h3>
+    <p>שני הסוגים הנ"ל הינם אמאפיינים של אותו אובייקט window</p>
+    <p>(כמו כל דבר)</p>
+    <h4>Local storage</h4>
+    <p>זיכרון מקומי שנשמר על המחשב - ה-client, ממש בתוך הדפדפן עצמו.</p>
+    <p>
+      הזיכרון הלוקאלי משוייך לכתובת URL ספציפית ולא נחמק לעולם, עד שלא נמחק אותו
+      פיזית
+    </p>
+    <h4>session storage</h4>
+    <p>זיכרון מקומי שנשמר על המחשב של ה-client, ממש בתוך הדפדפן עצמו.</p>
+    <p>
+      זיכרון הסשן נשמר רק לתקופה של הסשן, תקופת החיבור שלי עם האתר מאותו client
+      (דפדפן)
+    </p>
+    <h3>JSON</h3>
+    <p>2 מתודות עיקריות</p>
+    <h4>JSON.stringify</h4>
+    <p>לקבל אובייקט JS ולהמיר אותו לסטרינג במבנה JSON</p>
+    <h4>JSON.parse</h4>
+    <p>לקבל סטרינג במבנה JSON ולהחזיר אותו כאובייקט JS</p>
+
+    <script src="app.js"></script>
+  </body>
+</html>

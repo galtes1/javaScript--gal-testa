@@ -4,12 +4,50 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>counter</title>
+    <style>
+      #numberBox {
+        margin-top: 30px;
+        margin-left: 30px;
+        width: 150px;
+      }
+      #main {
+        height: 150px;
+        width: 150px;
+        border: 2px solid #000;
+        border-radius: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+      }
+      #btnBox {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 10px;
+      }
+      #decrement,
+      #increment {
+        height: 30px;
+        width: 40px;
+        border: 2px solid #000;
+        border-radius: 25%;
+        cursor: pointer;
+      }
+    </style>
   </head>
   <body>
-    <h1>counter</h1>
-    <h2>0</h2>
-    <button id="plus">+</button>
-    <button id="minus">-</button>
+    <div id="numberBox">
+      <div id="main">
+        <h1 id="inNum">0</h1>
+      </div>
+      <div id="btnBox">
+        <button id="increment">+</button>
+        <button id="decrement">-</button>
+        <br />
+        <button id="reseter">reset</button>
+      </div>
+    </div>
+
     <script src="app.js"></script>
   </body>
 </html>
