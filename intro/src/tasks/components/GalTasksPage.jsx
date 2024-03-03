@@ -1,22 +1,23 @@
-import Table from "@mui/material/Table";
-import TableBody from "@mui/material/TableBody";
-import TableCell from "@mui/material/TableCell";
-import TableContainer from "@mui/material/TableContainer";
-import TableHead from "@mui/material/TableHead";
-import TableRow from "@mui/material/TableRow";
-import Paper from "@mui/material/Paper";
 import React from "react";
+import GalTaskComp from "./GalTaskComp";
+import { Card, CardContent, CardHeader, Typography } from "@mui/material";
 
-const taskObject1 = {
- name: "dishes",
- date: "2024-01-30",
- type: "chore",
-};
-const taskObject2 = {
- name: "garbage",
- date: "2024-01-28",
- type: "chore",
-};
-export default function GalTasksPage() {
- return <Table></Table>;
+export default function GalTasksPage({ tasks }) {
+  return (
+    <Card>
+      <CardHeader title={tasks.name} />
+      <CardContent sx={{ paddingTop: 0, justifyContent: "space-around" }}>
+        <GalTaskComp task={tasks[0]} />
+        <GalTaskComp task={tasks[1]} />
+        {/* <Typography variant="body2" color="text.secondary">
+          <strong>Date: </strong>
+          {tasks.date}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          <strong>Type: </strong>
+          {tasks.type}
+        </Typography> */}
+      </CardContent>
+    </Card>
+  );
 }
