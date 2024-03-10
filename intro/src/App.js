@@ -1,15 +1,7 @@
-import CustomCardsPage from "./cards/components/CustomCardsPage";
-import CustomConditionalRenderingExample from "./components/CustomConditionalRenderingExample";
-import CustomCounter from "./components/CustomCounter";
-import CustomMyBox from "./components/CustomMyBox";
-import GalTasksPage from "./tasks/components/GalTasksPage";
+import CustomFormPage from "./components/CustomFormPage";
 
 function App() {
-  return (
-    <>
-      <CustomMyBox />
-    </>
-  );
+  return <CustomFormPage />;
 }
 
 export default App;
