@@ -1,7 +1,7 @@
-import CustomFormPage from "./components/CustomFormPage";
+import CustomCardsPage from "./cards/components/CustomCardsPage";
 
 function App() {
-  return <CustomFormPage />;
+  return <CustomCardsPage />;
 }
 
 export default App;

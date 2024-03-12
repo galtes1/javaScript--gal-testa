@@ -5,7 +5,13 @@ import CardHeaderComponent from "./CardHeaderComponent";
 import CardBody from "./CardBody";
 import CardActionBar from "./CardActionBar";
 
-function CardComponent({ card }) {
+function CardComponent({
+  card,
+  handleCardDelete,
+  handleCardLike,
+  handleCardEdit,
+  handleCardCall,
+}) {
   return (
     <Card sx={{ width: 250, m: 2 }}>
       <CardActionArea>
@@ -19,7 +25,13 @@ function CardComponent({ card }) {
           cardNumber={card.bizNumber}
         />
       </CardActionArea>
-      <CardActionBar />
+      <CardActionBar
+        card={card._id}
+        handleCardDelete={() => handleCardDelete()}
+        handleCardLike={() => handleCardLike()}
+        handleCardEdit={() => handleCardEdit()}
+        handleCardCall={() => handleCardCall()}
+      />
     </Card>
   );
 }
