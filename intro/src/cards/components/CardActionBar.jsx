@@ -6,27 +6,28 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import React from "react";
 
 export default function CardActionBar({
-  card,
+  _id,
   handleCardDelete,
   handleCardLike,
-  handleCardEdit,
-  handleCardCall,
 }) {
+  const handleCardEdit = (_id) => {
+    console.log("lets go and edit card no " + _id);
+  };
   return (
     <CardActions sx={{ paddingTop: 0, justifyContent: "space-between" }}>
       <Box>
-        <IconButton onClick={() => handleCardDelete(card._id)}>
+        <IconButton onClick={() => handleCardDelete(_id)}>
           <DeleteIcon />
         </IconButton>
-        <IconButton onClick={() => handleCardEdit(card._id)}>
+        <IconButton onClick={() => handleCardEdit(_id)}>
           <ModeEditIcon />
         </IconButton>
       </Box>
       <Box>
-        <IconButton onClick={() => handleCardCall(card._id)}>
+        <IconButton>
           <CallIcon />
         </IconButton>
-        <IconButton onClick={() => handleCardLike(card._id)}>
+        <IconButton onClick={() => handleCardLike(_id)}>
           <FavoriteIcon />
         </IconButton>
       </Box>

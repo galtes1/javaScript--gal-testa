@@ -102,25 +102,24 @@ const handleCardDelete = (_id) => {
 const handleCardLike = (_id) => {
   console.log("you liked card no. " + _id);
 };
-const handleCardEdit = (_id) => {
-  console.log("you want to edit card no. " + _id);
-};
-const handleCardCall = (_id) => {
-  console.log("call card no. " + _id + "?");
-};
 
 export default function CustomCardsPage() {
   return (
-    <Container sx={{ direction: "rtl", display: "flex", flexWrap: "wrap" }}>
-      {cards.map((card) => (
+    <Container
+      sx={{
+        direction: "rtl",
+        display: "flex",
+        flexWrap: "wrap",
+        backgroundColor: "#6DBABA",
+      }}
+    >
+      {cards.map((card, index) => (
         <Box sx={{ mb: 10 }}>
           <CardComponent
             card={card}
             key={card._id}
-            handleCardDelete={() => handleCardDelete(card._id)}
-            handleCardLike={() => handleCardLike(card._id)}
-            handleCardEdit={() => handleCardEdit(card._id)}
-            handleCardCall={() => handleCardCall(card._id)}
+            handleCardDelete={handleCardDelete}
+            handleCardLike={handleCardLike}
           />
         </Box>
       ))}
