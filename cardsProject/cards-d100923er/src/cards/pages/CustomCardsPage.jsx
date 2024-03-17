@@ -1,6 +1,6 @@
 import { Box, Container } from "@mui/material";
 import React from "react";
-import CardComponent from "./CardComponent";
+import CustomCardComponent from "../components/card/CustomCardComponent";
 const cards = [
   {
     _id: "63765801e20ed868a69a62c4",
@@ -114,7 +114,7 @@ export default function CustomCardsPage() {
     >
       {cards.map((card) => (
         <Box sx={{ mb: 10 }}>
-          <CardComponent
+          <CustomCardComponent
             card={card}
             key={card._id}
             handleCardDelete={handleCardDelete}

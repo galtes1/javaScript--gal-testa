@@ -1,11 +1,13 @@
 import "./App.css";
-import CustomCards from "./cards/components/CustomCards";
+
+import { BrowserRouter } from "react-router-dom";
+import Router from "./routes/Router";
 
 function App() {
   return (
-    <>
-      <CustomCards />
-    </>
+    <BrowserRouter>
+      <Router />
+    </BrowserRouter>
   );
 }
 
