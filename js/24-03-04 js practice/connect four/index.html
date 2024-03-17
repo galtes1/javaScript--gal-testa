@@ -29,58 +29,105 @@
         background-color: #fff;
         border: 2px solid #333;
         box-sizing: border-box;
+        cursor: pointer; /* Add cursor pointer to indicate clickable */
+      }
+
+      .filled {
+        background-color: #13bbd9; /* Color for filled circles */
+      }
+      .alternate-filled {
+        background-color: #e39d05; /* Alternate color for filled circles */
       }
     </style>
   </head>
   <body>
     <div id="board">
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
+      <div class="column">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+      <div class="column">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+      <div class="column">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+      <div class="column">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+      <div class="column">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+      <div class="column">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+      <!-- Repeat the above column div for each column -->
 
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
+      <!-- Add JavaScript to handle click events -->
+      <script>
+        const columns = document.querySelectorAll(".column");
 
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
+        columns.forEach((column) => {
+          let clickCount = 0;
 
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
+          column.addEventListener("click", () => {
+            const circles = Array.from(
+              column.querySelectorAll(".circle")
+            ).reverse();
+            let emptyCircle = null;
 
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
+            // Find the first empty circle from bottom to top
+            for (let i = 0; i < circles.length; i++) {
+              if (
+                !circles[i].classList.contains("filled") &&
+                !circles[i].classList.contains("alternate-filled")
+              ) {
+                emptyCircle = circles[i];
+                break;
+              }
+            }
 
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
+            // Alternate between filling with two different colors
+            if (emptyCircle) {
+              clickCount++;
+              if (clickCount % 2 === 0) {
+                emptyCircle.classList.add("alternate-filled");
+              } else {
+                emptyCircle.classList.add("filled");
+              }
+            }
+          });
+        });
+      </script>
     </div>
   </body>
 </html>
