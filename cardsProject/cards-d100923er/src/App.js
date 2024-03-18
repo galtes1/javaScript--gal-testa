@@ -8,7 +8,7 @@ function App() {
   return (
     <BrowserRouter>
       <CustomLayout>
-        <Router />
+        <Router />;
       </CustomLayout>
     </BrowserRouter>
   );
