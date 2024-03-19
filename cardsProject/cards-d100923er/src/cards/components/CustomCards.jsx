@@ -119,10 +119,9 @@ export default function CustomCards() {
       }}
     >
       {cards.map((card) => (
-        <Box sx={{ mb: 10 }}>
+        <Box sx={{ mb: 10 }} key={card._id}>
           <CustomCardComponent
             card={card}
-            key={card._id}
             handleCardDelete={handleCardDelete}
             handleCardLike={handleCardLike}
           />

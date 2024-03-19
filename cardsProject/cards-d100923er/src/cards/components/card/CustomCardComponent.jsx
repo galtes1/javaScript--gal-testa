@@ -7,7 +7,7 @@ import CardActionBar from "./CustomCardActionBar";
 
 function CustomCardComponent({ card, handleCardDelete, handleCardLike }) {
   return (
-    <Card sx={{ width: 250, m: 2 }}>
+    <Card sx={{ width: 250, m: 2, textAlign: "left" }}>
       <CardActionArea>
         <CardHeaderComponent image={card.image} />
         <CardBody

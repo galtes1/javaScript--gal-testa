@@ -1,10 +1,14 @@
-import { Avatar } from "@mui/material";
+import { Avatar, IconButton } from "@mui/material";
 import React from "react";
 
-export default function CustomLogoIcon({ avatarPNG }) {
+export default function CustomLogoIcon() {
   return (
-    <>
-      <Avatar alt="avatar" src={avatarPNG} />
-    </>
+    <IconButton>
+      <Avatar
+        alt="B"
+        src="assets/avatarCards.png"
+        sx={{ width: 56, height: 56 }}
+      />
+    </IconButton>
   );
 }
