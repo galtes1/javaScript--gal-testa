@@ -90,44 +90,11 @@
         <div class="circle"></div>
         <div class="circle"></div>
       </div>
+
       <!-- Repeat the above column div for each column -->
 
       <!-- Add JavaScript to handle click events -->
-      <script>
-        const columns = document.querySelectorAll(".column");
-
-        columns.forEach((column) => {
-          let clickCount = 0;
-
-          column.addEventListener("click", () => {
-            const circles = Array.from(
-              column.querySelectorAll(".circle")
-            ).reverse();
-            let emptyCircle = null;
-
-            // Find the first empty circle from bottom to top
-            for (let i = 0; i < circles.length; i++) {
-              if (
-                !circles[i].classList.contains("filled") &&
-                !circles[i].classList.contains("alternate-filled")
-              ) {
-                emptyCircle = circles[i];
-                break;
-              }
-            }
-
-            // Alternate between filling with two different colors
-            if (emptyCircle) {
-              clickCount++;
-              if (clickCount % 2 === 0) {
-                emptyCircle.classList.add("alternate-filled");
-              } else {
-                emptyCircle.classList.add("filled");
-              }
-            }
-          });
-        });
-      </script>
     </div>
+    <script src="app.js"></script>
   </body>
 </html>
