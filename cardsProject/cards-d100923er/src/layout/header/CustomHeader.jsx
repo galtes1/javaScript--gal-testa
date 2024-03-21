@@ -1,20 +1,20 @@
 import React from "react";
-import CustomLogo from "./topNavBar/logo/CustomLogo";
-import CustomLogoIcon from "./topNavBar/logo/CustomLogoIcon";
-import { Stack } from "@mui/material";
+import { Box } from "@mui/material";
+import CustomNavBar from "./topNavBar/CustomNavBar";
 
 export default function CustomHeader() {
   return (
-    <Stack
+    <Box
       direction="row"
       spacing={2}
       sx={{
         backgroundColor: "#6DBABA",
         color: "#e3f2fd",
+        position: "sticky",
+        zIndex: 999,
       }}
     >
-      <CustomLogoIcon />
-      <CustomLogo />
-    </Stack>
+      <CustomNavBar />
+    </Box>
   );
 }
