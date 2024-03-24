@@ -90,3 +90,24 @@ function resetBoard() {
   });
   clickCount = 0;
 }
+const playerInput = document.getElementById("playerInput");
+const playerNames = document.getElementById("playerNames");
+const startBtn = document.getElementById("startBtn");
+const player1Input = document.getElementById("player1Input");
+const player2Input = document.getElementById("player2Input");
+const player1Name = document.getElementById("player1Name");
+const player2Name = document.getElementById("player2Name");
+
+startBtn.addEventListener("click", () => {
+  const player1 = player1Input.value.trim();
+  const player2 = player2Input.value.trim();
+
+  if (player1 !== "" && player2 !== "") {
+    playerInput.style.display = "none";
+    playerNames.style.display = "block";
+    player1Name.textContent = `Player 1: ${player1}`;
+    player2Name.textContent = `Player 2: ${player2}`;
+  } else {
+    alert("Please enter names for both players.");
+  }
+});

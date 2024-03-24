@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(7, 60px);
+  grid-template-rows: repeat(6, 60px);
+  gap: 5px;
+}
+
+.circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 2px solid #333;
+  box-sizing: border-box;
+  cursor: pointer; /* Add cursor pointer to indicate clickable */
+}
+
+.filled {
+  background-color: #13bbd9; /* Color for filled circles */
+}
+.alternate-filled {
+  background-color: #e39d05; /* Alternate color for filled circles */
+}
+#playerInput {
+  /* position: absolute; */
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+}
+
+#playerInput input,
+#playerInput button {
+  margin-bottom: 10px;
+}
+#playerNames {
+  display: none;
+  /* position: absolute; */
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}

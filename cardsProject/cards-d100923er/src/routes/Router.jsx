@@ -5,6 +5,7 @@ import CustomCardsPage from "../cards/pages/CustomCardsPage";
 import CustomAboutPage from "../pages/CustomAboutPage";
 import CustomErrorPage from "../pages/CustomErrorPage";
 import CustomCardDetailsPage from "../cards/pages/CustomCardDetailsPage";
+import CustomSandBoxPage from "../pages/CustomSandBoxPage";
 
 export default function Router() {
   return (
@@ -16,6 +17,7 @@ export default function Router() {
         path={ROUTES.CARD_INFO + "/:id"}
         element={<CustomCardDetailsPage />}
       />
+      <Route path={ROUTES.SANDBOX} element={<CustomSandBoxPage />} />
       <Route path="*" element={<CustomErrorPage />} />
     </Routes>
   );

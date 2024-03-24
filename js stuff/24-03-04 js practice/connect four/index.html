@@ -4,43 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Connect Four</title>
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background-color: #f0f0f0;
-      }
-
-      #board {
-        display: grid;
-        grid-template-columns: repeat(7, 60px);
-        grid-template-rows: repeat(6, 60px);
-        gap: 5px;
-      }
-
-      .circle {
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        background-color: #fff;
-        border: 2px solid #333;
-        box-sizing: border-box;
-        cursor: pointer; /* Add cursor pointer to indicate clickable */
-      }
-
-      .filled {
-        background-color: #13bbd9; /* Color for filled circles */
-      }
-      .alternate-filled {
-        background-color: #e39d05; /* Alternate color for filled circles */
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div id="playerInput">
+      <input type="text" id="player1Input" placeholder="player 1" />
+      <input type="text" id="player2Input" placeholder="player 2" />
+      <button id="startBtn">start</button>
+    </div>
+    <div id="playerNames" style="display: none">
+      <p id="player1Name"></p>
+      <p id="player2Name"></p>
+    </div>
+    </div>
     <div id="board">
       <div class="column">
         <div class="circle"></div>
@@ -90,10 +66,9 @@
         <div class="circle"></div>
         <div class="circle"></div>
       </div>
-
-      <!-- Repeat the above column div for each column -->
-
-      <!-- Add JavaScript to handle click events -->
+    </div>
+    <div>
+      <button id="resetBtn">reset</button>
     </div>
     <script src="app.js"></script>
   </body>
