@@ -6,6 +6,7 @@ import CustomAboutPage from "../pages/CustomAboutPage";
 import CustomErrorPage from "../pages/CustomErrorPage";
 import CustomCardDetailsPage from "../cards/pages/CustomCardDetailsPage";
 import CustomSandBoxPage from "../pages/CustomSandBoxPage";
+import CustomCounterPage from "../pages/CustomCounterPage";
 
 export default function Router() {
   return (
@@ -18,6 +19,7 @@ export default function Router() {
         element={<CustomCardDetailsPage />}
       />
       <Route path={ROUTES.SANDBOX} element={<CustomSandBoxPage />} />
+      <Route path={ROUTES.COUNTER} element={<CustomCounterPage />} />
       <Route path="*" element={<CustomErrorPage />} />
     </Routes>
   );
