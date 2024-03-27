@@ -5,8 +5,10 @@ import CustomCardsPage from "../cards/pages/CustomCardsPage";
 import CustomAboutPage from "../pages/CustomAboutPage";
 import CustomErrorPage from "../pages/CustomErrorPage";
 import CustomCardDetailsPage from "../cards/pages/CustomCardDetailsPage";
-import CustomSandBoxPage from "../pages/CustomSandBoxPage";
+import CustomSandBoxPage from "../sandbox/CustomSandBoxPage";
 import CustomCounterPage from "../pages/CustomCounterPage";
+import CustomLifeCycle from "../sandbox/sandboxPages/CustomLifeCycle";
+import CustomCountries from "../sandbox/sandboxPages/CustomCountries";
 
 export default function Router() {
   return (
@@ -18,8 +20,11 @@ export default function Router() {
         path={ROUTES.CARD_INFO + "/:id"}
         element={<CustomCardDetailsPage />}
       />
-      <Route path={ROUTES.SANDBOX} element={<CustomSandBoxPage />} />
-      <Route path={ROUTES.COUNTER} element={<CustomCounterPage />} />
+      <Route path={ROUTES.SANDBOX} element={<CustomSandBoxPage />}>
+        <Route path="counter" element={<CustomCounterPage />} />
+        <Route path="lifeCycle" element={<CustomLifeCycle />} />
+        <Route path="countries" element={<CustomCountries />} />
+      </Route>
       <Route path="*" element={<CustomErrorPage />} />
     </Routes>
   );

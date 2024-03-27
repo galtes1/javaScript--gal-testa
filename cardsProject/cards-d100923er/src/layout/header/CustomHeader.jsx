@@ -5,7 +5,7 @@ import CustomNavBar from "./topNavBar/CustomNavBar";
 export default function CustomHeader() {
   return (
     <Box
-      position={"sticky"}
+      position="sticky"
       direction="row"
       spacing={2}
       sx={{

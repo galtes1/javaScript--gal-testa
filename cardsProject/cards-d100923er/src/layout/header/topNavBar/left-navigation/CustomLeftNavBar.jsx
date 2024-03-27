@@ -11,7 +11,6 @@ export default function CustomLeftNavBar() {
       <Box>
         <CustomLogoIcon />
         <CustomLogo />
-        <CustomNavItem to={ROUTES.CARDS} label={"cards"} />
         <CustomNavItem to={ROUTES.ABOUT} label={"about"} />
         <CustomNavItem to={ROUTES.SANDBOX} label={"sandbox"} />
       </Box>

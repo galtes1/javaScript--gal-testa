@@ -6,7 +6,7 @@ import ROUTES from "../../../../routes/routesModel";
 export default function CustomLogo() {
   return (
     <>
-      <CustomNavBarLink to={ROUTES.CARDS}>
+      <CustomNavBarLink to={ROUTES.ROOT}>
         <Typography
           variant="h4"
           sx={{
