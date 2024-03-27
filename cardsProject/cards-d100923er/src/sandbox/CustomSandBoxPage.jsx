@@ -7,18 +7,10 @@ export default function CustomSandBoxPage() {
   return (
     <div>
       <AppBar position="sticky" color="transparent">
-        <Toolbar>
-          <CustomNavItem to="counter" label="Counter" sx={{ color: "black" }} />
-          <CustomNavItem
-            to="lifeCycle"
-            label="Life cycle"
-            sx={{ color: "black" }}
-          />
-          <CustomNavItem
-            to="countries"
-            label="Counteries"
-            sx={{ color: "black" }}
-          />
+        <Toolbar sx={{ color: "black" }}>
+          <CustomNavItem to="counter" label="Counter" />
+          <CustomNavItem to="lifeCycle" label="Life cycle" />
+          <CustomNavItem to="countries" label="Counteries" />
         </Toolbar>
       </AppBar>
 
