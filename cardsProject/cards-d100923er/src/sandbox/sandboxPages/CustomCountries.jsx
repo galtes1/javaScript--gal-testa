@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Box, Typography } from "@mui/material";
+import { Box, Table, TableCell, TableContainer, TableHead, TableRow, Typography } from "@mui/material";
 
 export default function CustomCountries() {
   const [countriesList, setCountriesList] = useState([]);
@@ -22,15 +22,30 @@ export default function CustomCountries() {
 
   return (
     <div>
-      {countriesList.length === 0 ? (
-        <Typography>Loading...</Typography>
-      ) : (
-        countriesList.map((country, index) => (
-          <Box key={index}>
+    {countriesList.length === 0 ? (
+      <Typography>Loading...</Typography>
+    ) : (
+      countriesList.map((country, index) => (
+    <TableContainer component={paper} key={index}>
+      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+        <TableHead>
+          <TableRow>
+          <TableCell align="right"><Typography>Name</Typography></TableCell>
+          <TableCell align="right"><Typography>Official name</Typography></TableCell>
+          <TableCell align="right"><Typography>Region</Typography></TableCell>
+          </TableRow>
+        </TableHead>
+      </Table>
+    </TableContainer>)
+  
+   
+
+        
+          <Box >
             <Typography>{country.name.common}</Typography>
           </Box>
         ))
-      )}
+      )
     </div>
   );
 }
