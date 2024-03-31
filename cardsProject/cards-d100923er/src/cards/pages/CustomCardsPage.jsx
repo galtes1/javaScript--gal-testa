@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 
-import CustomCards from "../components/CustomCards";
 import CustomPageHeader from "../../components/CustomPageHeader";
 import axios from "axios";
 import CustomCardsFeedback from "../components/CustomCardsFeedback";

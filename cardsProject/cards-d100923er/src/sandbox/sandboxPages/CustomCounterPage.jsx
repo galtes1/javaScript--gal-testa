@@ -1,27 +1,19 @@
 import { Box, Button, Typography } from "@mui/material";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
+import useCounter from "../hooks/useCounter";
 
 export default function CustomCounterPage() {
-  const [Counter, setCounter] = useState(0);
+  const { counter, increment, decrement, resetCounter } = useCounter(50, 10);
 
   useEffect(() => {
-    if (Counter % 7 === 0 || Counter.toString().includes("7")) {
-      console.log(Counter + " Boom");
+    if (counter % 7 === 0 || counter.toString().includes("7")) {
+      console.log(counter + " Boom");
     }
     return () => {
       console.log("counter unmount");
     };
-  }, [Counter]);
+  }, [counter]);
 
-  const increment = () => {
-    setCounter((prev) => prev + 1);
-  };
-  const decrement = () => {
-    setCounter((prev) => prev - 1);
-  };
-  const resetCounter = () => {
-    setCounter(0);
-  };
   return (
     <Box
       display="flex"
@@ -41,7 +33,7 @@ export default function CustomCounterPage() {
         p={2}
         sx={{ border: "2px solid grey" }}
       >
-        <Typography variant="h2">{Counter}</Typography>
+        <Typography variant="h2">{counter}</Typography>
       </Box>
       <Box>
         <Button variant="contained" sx={{ mr: 4 }} onClick={increment}>
