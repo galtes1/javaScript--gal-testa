@@ -4,9 +4,6 @@ import { Outlet } from "react-router-dom";
 import CustomNavItem from "../routes/components/CustomNavItem";
 
 export default function CustomSandBoxPage() {
-
-
-
   return (
     <div>
       <AppBar position="sticky" color="secondary">
@@ -14,6 +11,7 @@ export default function CustomSandBoxPage() {
           <CustomNavItem to="counter" label="Counter" />
           <CustomNavItem to="lifeCycle" label="Life cycle" />
           <CustomNavItem to="countries" label="Counteries" />
+          <CustomNavItem to="spinner" label="Spinner" />
         </Toolbar>
       </AppBar>
 

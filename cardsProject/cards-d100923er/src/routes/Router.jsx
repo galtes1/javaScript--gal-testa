@@ -9,6 +9,7 @@ import CustomSandBoxPage from "../sandbox/CustomSandBoxPage";
 import CustomCounterPage from "../pages/CustomCounterPage";
 import CustomLifeCycle from "../sandbox/sandboxPages/CustomLifeCycle";
 import CustomCountries from "../sandbox/sandboxPages/CustomCountries";
+import CustomSpinner from "../components/CustomSpinner";
 
 export default function Router() {
   return (
@@ -24,6 +25,7 @@ export default function Router() {
         <Route path="counter" element={<CustomCounterPage />} />
         <Route path="lifeCycle" element={<CustomLifeCycle />} />
         <Route path="countries" element={<CustomCountries />} />
+        <Route path="spinner" element={<CustomSpinner />} />
       </Route>
       <Route path="*" element={<CustomErrorPage />} />
     </Routes>

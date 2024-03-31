@@ -13,6 +13,7 @@ const ROUTES = {
   EDIT_USER: "/edit-user",
   SANDBOX: "/sandbox",
   COUNTER: "/counter",
+  SPINNER: "/spinner",
 };
 
 export default ROUTES;
