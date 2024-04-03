@@ -10,7 +10,7 @@ import CustomCounterPage from "../sandbox/sandboxPages/CustomCounterPage";
 import CustomLifeCycle from "../sandbox/sandboxPages/CustomLifeCycle";
 import CustomCountries from "../sandbox/sandboxPages/CustomCountries";
 import CustomSpinner from "../components/CustomSpinner";
-import CustomFormExample from "../sandbox/CustomFormExample";
+import CustomFormExample from "../sandbox/sandboxPages/CustomFormExample";
 
 export default function Router() {
   return (

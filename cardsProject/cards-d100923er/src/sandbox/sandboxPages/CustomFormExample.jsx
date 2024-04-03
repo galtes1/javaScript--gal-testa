@@ -2,11 +2,10 @@ import { Box, Button, Paper, TextField } from "@mui/material";
 import React, { useState } from "react";
 import Joi from "joi";
 
-const schema = Joi.object({ 
-   firstName: Joi.string().min(2),   
-   lastName: Joi.string().min(2).max(10),
-
-})
+const schema = Joi.object({
+  firstName: Joi.string().min(2),
+  lastName: Joi.string().min(2).max(10),
+});
 
 export default function CustomFormExample() {
   const [formData, setFormData] = useState({
@@ -17,7 +16,7 @@ export default function CustomFormExample() {
   const handleChange = (event) => {
     setFormData((prev) => ({
       ...prev,
-      [event.target.name]: event.target.vale,
+      [event.target.name]: event.target.value,
     }));
   };
   const handleSubmit = () => {
@@ -33,10 +32,12 @@ export default function CustomFormExample() {
           name="firstName"
           onChange={handleChange}
         />
-        <TextField  label="last name"
+        <TextField
+          label="last name"
           value={formData.lastName}
           name="lastName"
-          onChange={handleChange} />
+          onChange={handleChange}
+        />
         <Button onClick={handleSubmit}>submit</Button>
       </Box>
     </div>
